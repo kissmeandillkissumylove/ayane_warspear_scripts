@@ -1,0 +1,47 @@
+// docstring: this script logs into your account
+set #warsphandle findwindow (Warspear)      // find warspear window
+wait 100 + random (100)                     // w8
+if_not #warsphandle = 0                     // if handle is exists
+    wait 500 + random (500)                 // w8
+    set windowpos -7 0 526 521 #warsphandle // set window position
+    wait 500 + random (100)                 // w8
+    showwindow #warsphandle TOP             // up the work window
+    wait 500 + random (100)                 // w8
+    sendex {f2}                             // open menu (press F2)
+    wait 500 + random (100)                 // w8
+    sendex {f2}                             // menu
+    wait 500 + random (100)                 // w8
+    sendex 1                                // switch profile
+    wait 500 + random (100)                 // w8
+    sendex {f2}                             // accept
+    wait 500 + random (100)                 // w8
+    sendex {down}                           // go down to the login field
+    wait 500 + random (100)                 // w8
+    set workwindow #warsphandle             // set work window for swap layout
+    wait 500 + random (100)                 // w8
+    set $var setlayout (0409)               // change layout to english
+    wait 500 + random (100)                 // w8
+    sendex_down {backspace}                 // clear field
+    wait 1500 + random (1000)               // w8
+    sendex_up {backspace}                   // release the backspace button
+    wait 500 + random (100)                 // w8
+    set SendExDelay 150 + random (300)      // changing the speed of pressing
+                                            // and releasing keys. this is
+                                            // necessary to emulate a human
+    sendex login                            // gmail name
+    wait 500 + random (100)                 // w8
+    sendex ~2                               // type @ symbol
+    wait 500 + random (100)                 // w8
+    sendex gmail.com                        // type gmail.com
+    wait 500 + random (100)                 // w8
+    sendex {down}                           // go down to the password field
+    wait 500 + random (100)                 // w8
+    sendex password                         // type password
+    wait 500 + random (100)                 // w8
+    sendex {down}                           // go down to the ENTER field
+    wait 500 + random (100)                 // w8
+    sendex {down}                           // one more click
+    wait 500 + random (100)                 // w8
+    sendex {enter}                          // enter the game
+end_if
+end_script                                  // end script
