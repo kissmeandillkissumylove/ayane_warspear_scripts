@@ -1,0 +1,18 @@
+// docstring: bot for farming termitary cocons. window binding is required.
+// you cannot block a window with other windows. you cannot move the window.
+// you cannot move the mouse or click on the window while the bot is working.
+// starting position - m4t2. location: Vortex of Oblivion. the character must
+// stand on the square towards the entrance to the cave BUT do not enter the
+// cave.
+// 10.14.2023 https://github.com/kissmeandillkissumylove
+
+// main programm.
+gosub setwarsp // set warspear window position.
+end_script
+
+// moduls.
+:setwarsp
+    set #warsphandle findwindow (Warspear)
+    if_not #warsphandle = 0
+    set windowpos -6 0 682 741 #warsphandle
+return
