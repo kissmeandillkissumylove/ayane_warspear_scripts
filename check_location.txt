@@ -35,9 +35,9 @@ while 1 = 1 // main loop
         alarm alarm.wav
     end_if
 
-    set #x 20
-    set #y 450
-    set #xx 80
+    set #x 79
+    set #y 451
+    set #xx 20
     set #yy 10
     gosub humanclick // close
     wait 1000 + random (500)
