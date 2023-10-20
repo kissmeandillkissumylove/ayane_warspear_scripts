@@ -1,4 +1,4 @@
-// docstring: location checker. window binding is not required. you can block
+// docstring: location checker. window binding is required. you can block
 // the window, BUT not in the place where the color is checked.
 // 10.19.2023 https://github.com/kissmeandillkissumylove
 
@@ -9,6 +9,7 @@ gosub setwindowpos
 wait 500 + random (500)
 
 while 1 = 1 // main loop
+    log #x #y #w #h
     set #x 460
     set #y 430
     set #xx 40
@@ -31,12 +32,12 @@ while 1 = 1 // main loop
     wait 1000 + random (500)
 
     if_not 105, 94 5397099
-        alarm
+        alarm alarm.wav
     end_if
 
-    set #x 10
+    set #x 20
     set #y 450
-    set #xx 100
+    set #xx 80
     set #yy 10
     gosub humanclick // close
     wait 1000 + random (500)
@@ -51,11 +52,11 @@ return
 
 :setwindowpos // module which set the window position and get handle
 set #warsphandle findwindow (Warspear)
-set windowpos -7 0 526 521 #warsphandle
+set windowpos -86 0 526 521 #warsphandle
 return
 
 :humanclick // module which makes clicks similar to human ones
-left_down #x #y 40 40 #warsphandle
+left_down #x #y 40 40
 wait 5 + random (40)
 left_up #x #y #xx #yy
 return
