@@ -15,21 +15,21 @@ while 1 = 1 // main loop
     set #xx 40
     set #yy 40
     gosub humanclick // open menu
-    wait 1000 + random (500)
+    wait 800 + random (500)
 
     set #x 350
     set #y 200
     set #xx 50
     set #yy 50
     gosub humanclick // open society
-    wait 1000 + random (500)
+    wait 800 + random (500)
 
     set #x 350
     set #y 60
     set #xx 50
     set #yy 50
     gosub humanclick // open location
-    wait 1000 + random (500)
+    wait 800 + random (500)
 
     if_not 105, 94 5397099
         alarm alarm.wav
@@ -40,7 +40,7 @@ while 1 = 1 // main loop
     set #xx 20
     set #yy 10
     gosub humanclick // close
-    wait 1000 + random (500)
+    wait 800 + random (500)
 
 end_while
 
@@ -56,7 +56,7 @@ set windowpos -86 0 526 521 #warsphandle
 return
 
 :humanclick // module which makes clicks similar to human ones
-left_down #x #y 40 40
+left_down #x #y #xx #yy
 wait 5 + random (40)
 left_up #x #y #xx #yy
 return
