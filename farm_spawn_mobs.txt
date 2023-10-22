@@ -1,4 +1,4 @@
-// docstring: bot for farming termitary cocons. window binding is required.
+// docstring: bot for farming spawn mobs. window binding is required.
 // you cannot block a window with other windows. you cannot move the window.
 // you cannot move the mouse or click on the window while the bot is working.
 // starting position - m4t2. location: Vortex of Oblivion. the character must
